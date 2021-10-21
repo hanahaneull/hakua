@@ -1,0 +1,16 @@
+{
+  "name": "hakua",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "WTFPL",
+  "author": {
+    "name": "Haneul Seong",
+    "url": "https://hana.cash",
+    "email": "hana@disroot.org"
+  },
+  "description": "Small selfbot client for simple task",
+  "homepage": "https://github.com/hanahaneull/hakua",
+  "dependencies": {
+    "got": "^11.8.2"
+  }
+}
