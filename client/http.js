@@ -11,8 +11,8 @@ module.exports = class HTTP {
       prefixUrl: ENDPOINT,
       headers: {
         authorization: client.token,
-        'User-Agent': client.device.browser_user_agent,
-        'X-Super-Properties': Buffer.from(client.device.browser_user_agent).toString('base64')
+        'User-Agent': this.device.browser_user_agent,
+        'X-Super-Properties': Buffer.from(this.device.browser_user_agent).toString('base64')
       },
       responseType: 'json',
       resolveBodyOnly: true
