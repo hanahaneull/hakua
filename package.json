@@ -11,6 +11,7 @@
   "description": "Small selfbot client for simple task",
   "homepage": "https://github.com/hanahaneull/hakua",
   "dependencies": {
-    "got": "^11.8.2"
+    "got": "^11.8.2",
+    "ua-parser-js": "^1.0.2"
   }
 }
