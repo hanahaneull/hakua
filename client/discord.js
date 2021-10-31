@@ -3,6 +3,7 @@ const got = require('got')
 const UAParser = require('ua-parser-js')
 
 const Channel = require('../discord/channel')
+const Message = require('../discord/message')
 
 // noinspection SpellCheckingInspection
 module.exports = class Discord {
@@ -42,6 +43,7 @@ module.exports = class Discord {
      }
      this.http = new HTTP(this)
      this.channel = new Channel(this)
+     this.message = new Message(this)
      this.loaded = true
    }
    if (force === true || !this.loaded) { return await createDevice() }
