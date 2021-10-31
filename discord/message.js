@@ -11,4 +11,18 @@ module.exports = class Message {
       resolve(res)
     })
   }
+
+  edit(channelID, messageID, content) {
+    return new Promise(async (resolve, reject) => {
+      if (!channelID) reject('Invalid channel ID')
+      if (!messageID) reject('Invalid message ID')
+      if (!content) reject('Message must have content')
+      const res = this.http.patch(`channels/${channelID}/messages/${messageID}`, {
+        json: {
+          content
+        }
+      }).catch(reject)
+      resolve(res)
+    })
+  }
 }
