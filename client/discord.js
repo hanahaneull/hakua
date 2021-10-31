@@ -44,7 +44,7 @@ module.exports = class Discord {
      this.channel = new Channel(this)
      this.loaded = true
    }
-   if (force === true || !this.loaded) { await createDevice() }
+   if (force === true || !this.loaded) { return await createDevice() }
    if (this.loaded) throw Error('Client already initialized!')
   }
 }
